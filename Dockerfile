@@ -1,3 +1,3 @@
 FROM python:alpine
-EXPOSE 80
-CMD ["python", "-m", "http.server", "80"]
+EXPOSE 3000
+CMD ["python", "-m", "http.server", "3000"]
