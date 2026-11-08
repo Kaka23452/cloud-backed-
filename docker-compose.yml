@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  my-app:
+    build: .
+    image: my-alpine-app:latest
+    ports:
+      - "3000:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'           # Equal to CPU_200M
+          memory: 512M          # Equal to MEMORY_512Mi
+        reservations:
+          cpus: '0.10'
+          memory: 256M
+    restart: always
